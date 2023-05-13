@@ -12,3 +12,15 @@ void Main()
     string[] result = GetResult(array, resultArrayLength);
     PrintArray(result);
 }
+string Input(string text)
+{
+    Console.Write($"{text}: ");
+    string temp = Console.ReadLine()!;
+    return temp;
+}
+string[] ArrayBuild(string tempStr)
+{
+    char[] separators = new char[] {',',' '};
+    string[] array = tempStr.Split(separators,StringSplitOptions.RemoveEmptyEntries);
+    return array;
+}
