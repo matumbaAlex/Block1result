@@ -20,31 +20,31 @@ string Input(string text)
 }
 string[] ArrayBuild(string tempStr)
 {
-    char[] separators = new char[] {',',' '};
-    string[] array = tempStr.Split(separators,StringSplitOptions.RemoveEmptyEntries);
+    char[] separators = new char[] { ',', ' ' };
+    string[] array = tempStr.Split(separators, StringSplitOptions.RemoveEmptyEntries);
     return array;
 }
-int GetLength(string[]array)
+int GetLength(string[] array)
 {
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i].Length<4)count++;   
+        if (array[i].Length < 4) count++;
     }
     return count;
 }
 
-string[] GetResult(string[]array,int length)
+string[] GetResult(string[] array, int length)
 {
     string[] result = new string[length];
     int count = 0;
     for (int j = 0; j < array.Length; j++)
     {
-        if(array[j].Length<4)
+        if (array[j].Length < 4)
         {
             result[count] = array[j];
             count++;
-        }   
+        }
     }
     return result;
 }
@@ -53,7 +53,7 @@ string[] GetResult(string[]array,int length)
 
 void PrintArray(string[] array)
 {
-    Console.WriteLine(String.Join(", ", array ));
-}  
+    Console.WriteLine(String.Join(", ", array));
+}
 
 Main();
