@@ -24,3 +24,9 @@ string[] ArrayBuild(string tempStr)
     string[] array = tempStr.Split(separators,StringSplitOptions.RemoveEmptyEntries);
     return array;
 }
+void PrintArray(string[] array)
+{
+    Console.WriteLine(String.Join(", ", array ));
+}  
+
+Main();
