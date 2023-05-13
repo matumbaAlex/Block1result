@@ -24,6 +24,33 @@ string[] ArrayBuild(string tempStr)
     string[] array = tempStr.Split(separators,StringSplitOptions.RemoveEmptyEntries);
     return array;
 }
+int GetLength(string[]array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i].Length<4)count++;   
+    }
+    return count;
+}
+
+string[] GetResult(string[]array,int length)
+{
+    string[] result = new string[length];
+    int count = 0;
+    for (int j = 0; j < array.Length; j++)
+    {
+        if(array[j].Length<4)
+        {
+            result[count] = array[j];
+            count++;
+        }   
+    }
+    return result;
+}
+
+
+
 void PrintArray(string[] array)
 {
     Console.WriteLine(String.Join(", ", array ));
